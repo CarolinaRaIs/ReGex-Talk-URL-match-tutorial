@@ -27,6 +27,10 @@ Please note that this regex is flexible and can handle various URL formats, incl
 ## Regex Components
 
 ### Anchors
+Anchors are special symbols that mark the beginning (^) and end ($) of a string. In the example above, ^ denotes the start of the string, and $ indicates the end of the string.
+
+^: Matches any string that starts with.
+$: Matches a string that ends with.
 
 ### Quantifiers
 
