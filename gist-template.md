@@ -99,16 +99,46 @@ Example:
 
 ### The OR Operator
 
+The OR operator in regular expressions is denoted by the vertical bar |. It allows you to specify alternative options to match within a pattern. It acts as a logical OR, meaning it will match either the pattern on the left side or the pattern on the right side.
+
+Example:
+
+    In the given regular expression ^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$:
+
+    The OR operator is not explicitly used. However, the presence of (https?:\/\/) indicates an optional match for either http:// or https://. This achieves a similar effect as the OR operator, allowing the regular expression to handle URLs with or without a specified protocol.
+
 ### Flags
+
+Flags in regular expressions are optional settings that can be added after the / at the end of the regular expression. They modify how the regular expression works.
+
+Example:
+
+    In the given regular expression /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/, no flags are specified. This means the regular expression will use the default behavior determined by the programming language or tool you are using.
+
+    The default behavior typically performs case-sensitive matching (distinguishing between uppercase and lowercase letters), matches only the first occurrence in the input string (non-global matching), and treats each line separately (single-line matching).
+
+If you need to change these behaviors, you can add flags after the /
+
+Examples of commonly used flags include:
+
+    i: Enables case-insensitive matching, allowing the regular expression to match both uppercase and lowercase characters interchangeably.
+
+    g: Enables global matching, where the regular expression continues to search for multiple matches throughout the input string instead of stopping after the first match.
+
+    m: Enables multi-line matching, where ^ and $ match the beginning and end of each line within a multi-line input string, instead of just the start and end of the entire string.
 
 ### Character Escapes
 
-In regular expressions, some characters have special meanings and are considered metacharacters. To match these characters literally (as regular characters) instead of interpreting their special meanings, you can use the backslash \ as an escape character. When a metacharacter is preceded by a backslash, it loses its special meaning and matches the character itself.
+Character escapes in regular expressions are used to treat certain characters with special meanings as literal characters. To match these characters literally (as regular characters) instead of interpreting their special meanings, you can use the backslash \ as an escape character. When a metacharacter is preceded by a backslash, it loses its special meaning and matches the character itself.
 
-For further explanation:
+In the given regular expression ^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$, there are a few character escapes used:
 
-\.: The backslash \ escapes the metacharacter . (dot), so it matches the character . literally. Without the backslash, . is a metacharacter that matches any character except a newline.
--: In this case, - is not a metacharacter and does not require escaping. It matches the character - literally. However, if - is used within a character class [ ], it can have a special meaning. For example, [a-z] matches any lowercase letter from a to z.
+    \.: The backslash '\' escapes the metacharacter '.' dot, so it matches the character '.' literally. Without the backslash, '.' is a metacharacter that matches any character except a newline.
+
+    \.-: In this case, '-' is not a metacharacter and does not require escaping. It matches the character '-' literally. It is used to match the literal hyphen within the character class [\da-z\.-] and [\/\w \.-]. However, if '-' is used within a character class '[ ]', it can have a special meaning. For example, [a-z] matches any lowercase letter from a to z.
+
+    \/\/: The sequence \/ is a character escape that matches the forward slash / character itself. The purpose of this escape is to match the literal forward slashes in https://.
+
 By using backslashes to escape metacharacters, you can match these characters literally instead of their special meaning in regular expressions.
 
 ## Author
