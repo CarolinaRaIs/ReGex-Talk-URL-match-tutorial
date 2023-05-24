@@ -143,4 +143,4 @@ By using backslashes to escape metacharacters, you can match these characters li
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+Carolina Ramirez Islas is currently a student of University of Oregon's Coding BootCamp with a background in chemical engineering, the paper industy, and teaching. To view more of Carolina's work go to https://github.com/CarolinaRaIs or email them at determination28@gmail.com.
