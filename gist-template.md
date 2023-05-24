@@ -91,6 +91,15 @@ The example we're analyzing contains the following bracket expressions:
 
 ### Character Classes
 
+Character classes define a set of characters to match within a larger set.
+
+Example:
+
+    [a-z]: Matches lowercase alphabetic characters between 'a' and 'z'.
+    \w: Matches a single word character (alphanumeric or underscore, [a-z0-9_]).
+    \d: Matches a single digit character (0-9).
+    .: Matches any character.
+
 ### The OR Operator
 
 ### Flags
