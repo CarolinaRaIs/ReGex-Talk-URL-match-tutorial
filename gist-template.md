@@ -35,7 +35,7 @@ $: Matches a string that ends with.
 ### Quantifiers
 Quantifiers specify the quantity of characters or expressions to the left of them that must be matched. There are two types of quantifiers: greedy and lazy(?). The default behavior for quantifiers is greedy, meaning it matches to as many occurrences as possible. To make a quantifier lazy, you can append a ? after the quantifier itself; matching the minimum number of occurrences instead of the maximum.
 
-* and *?: Matches zero or more occurrences of the preceding character or expression.
+* and *?: The greedy quantifier that matches zero or more occurrences of the preceding character or expression.
 + and +?: Matches one or more occurrences of the preceding character or expression.
 ? and ??: Matches zero or one occurrence of the preceding character or expression.
 {n} and {n}?: Matches exactly n occurrences of the preceding character or expression.
@@ -45,7 +45,7 @@ Quantifiers specify the quantity of characters or expressions to the left of the
 Examples:
 
 https?: The '?' makes the s optional, matching both 'https' and 'http'.
-[\da-z\.-]+: The '+' matches whats within the brackets one or more times(greedy), with the contents of the bracket containing (\d) which matches a digit (0-9), as well as letters (a-z), dots (.), or hyphens (-).
+[\da-z\.-]+: The '+' matches whats within the brackets one or more times(greedy), with the contents of the bracket containing a character class (\d) which matches a digit (0-9), as well as letters (a-z), dots (.), or hyphens (-).
 
 [a-z\.]{2,6}: The {2,6} matches whats within the brackets between 2 to 6 times(greedy). This indicates that there will be 2-6 copies of the sequence [a-z\.].
 
@@ -66,6 +66,12 @@ This means for [\/\w \.-]* there will be zero or more occurances of '/', any wor
     '//': Each character is a '/', which is specifically included in the character class as \/ (the backslash is used to escape the forward slash, indicating that we want to match the literal character '/', not use it as a regex metacharacter)
 
 ### Grouping Constructs
+Grouping expressions using parentheses () helps organize and extract characters within a given group.
+
+(https?:\/\/): This group allows the URL to begin with 'http://', 'https://', or none.
+([\da-z\.-]+): This group matches one or more numbers, letters, dots, or hyphens.
+([a-z\.]{2,6}): This group matches 2 to 6 copies of the sequence '[a-z.]'.
+([\/\w \.-]*): This group matches multiple (greedy) occurrences (0 or more) of '/', '.', '-', 'www', or other directories.
 
 ### Bracket Expressions
 
