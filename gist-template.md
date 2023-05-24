@@ -1,4 +1,4 @@
-# Title (replace with your title)
+# ReGex-Talk-URL-match-tutorial
 
 Whether you are a beginner seeking to understand regex or an experienced developer looking to expand your skills, this tutorial will provide you with the guidance and hands-on practice needed to master URL matching using regex. 
 
@@ -27,29 +27,32 @@ Please note that this regex is flexible and can handle various URL formats, incl
 ## Regex Components
 
 ### Anchors
-Anchors are special symbols that mark the beginning (^) and end ($) of a string. In the example above, ^ denotes the start of the string, and $ indicates the end of the string.
 
-^: Matches any string that starts with.
-$: Matches a string that ends with.
+Anchors are special symbols that mark the beginning (^) and end $ of a string. In the example above, ^ denotes the start of the string, and $ indicates the end of the string.
+
+    ^: Matches any string that starts with.
+    $: Matches a string that ends with.
 
 ### Quantifiers
+
 Quantifiers specify the quantity of characters or expressions to the left of them that must be matched. There are two types of quantifiers: greedy and lazy(?). The default behavior for quantifiers is greedy, meaning it matches to as many occurrences as possible. To make a quantifier lazy, you can append a ? after the quantifier itself; matching the minimum number of occurrences instead of the maximum.
 
-* and *?: The greedy quantifier that matches zero or more occurrences of the preceding character or expression.
-+ and +?: Matches one or more occurrences of the preceding character or expression.
-? and ??: Matches zero or one occurrence of the preceding character or expression.
-{n} and {n}?: Matches exactly n occurrences of the preceding character or expression.
-{n,} and {n,}?: Matches at least n occurrences of the preceding character or expression.
-{n,m} and {n,m}?: Matches from n to m occurrences of the preceding character or expression.
+    * and *?: The greedy quantifier that matches zero or more occurrences of the preceding character or expression.
+    + and +?: Matches one or more occurrences of the preceding character or expression.
+    ? and ??: Matches zero or one occurrence of the preceding character or expression.
+    {n} and {n}?: Matches exactly n occurrences of the preceding character or expression.
+    {n,} and {n,}?: Matches at least n occurrences of the preceding character or expression.
+    {n,m} and {n,m}?: Matches from n to m occurrences of the preceding character or expression.
 
 Examples:
 
-https?: The '?' makes the s optional, matching both 'https' and 'http'.
-[\da-z\.-]+: The '+' matches whats within the brackets one or more times(greedy), with the contents of the bracket containing a character class (\d) which matches a digit (0-9), as well as letters (a-z), dots (.), or hyphens (-).
+    https?: The '?' makes the s optional, matching both 'https' and 'http'.
 
-[a-z\.]{2,6}: The {2,6} matches whats within the brackets between 2 to 6 times(greedy). This indicates that there will be 2-6 copies of the sequence [a-z\.].
+    [\da-z\.-]+: The '+' matches whats within the brackets one or more times(greedy), with the contents of the bracket containing a character class (\d) which matches a digit (0-9), as well as letters (a-z), dots (.), or hyphens (-).
 
-[\/\w \.-]*: The '*' matches the contents within the brackets zero or more times(greedy). This means the regex will match even if there are no characters at all, or if the string contains only characters that are in the character class [\/\w \.-] In regular expressions, \w is a shorthand character class that matches any "word" character.
+    [a-z\.]{2,6}: The {2,6} matches whats within the brackets between 2 to 6 times(greedy). This indicates that there will be 2-6 copies of the sequence [a-z\.].
+
+    [\/\w \.-]*: The '*' matches the contents within the brackets zero or more times(greedy). This means the regex will match even if there are no characters at all, or if the string contains only characters that are in the character class [\/\w \.-] In regular expressions, \w is a shorthand character class that matches any "word" character.
     
     This means \w will match:
 
@@ -66,19 +69,25 @@ This means for [\/\w \.-]* there will be zero or more occurances of '/', any wor
     '//': Each character is a '/', which is specifically included in the character class as \/ (the backslash is used to escape the forward slash, indicating that we want to match the literal character '/', not use it as a regex metacharacter)
 
 ### Grouping Constructs
+
 Grouping expressions using parentheses () helps organize and extract characters within a given group.
 
-(https?:\/\/): This group allows the URL to begin with 'http://', 'https://', or none.
-([\da-z\.-]+): This group matches one or more numbers, letters, dots, or hyphens.
-([a-z\.]{2,6}): This group matches 2 to 6 copies of the sequence '[a-z.]'.
-([\/\w \.-]*): This group matches multiple (greedy) occurrences (0 or more) of '/', '.', '-', 'www', or other directories.
+Examples:
+
+    (https?:\/\/): This group allows the URL to begin with 'http://', 'https://', or none.
+    ([\da-z\.-]+): This group matches one or more numbers, letters, dots, or hyphens.
+    ([a-z\.]{2,6}): This group matches 2 to 6 copies of the sequence '[a-z.]'.
+    ([\/\w \.-]*): This group matches multiple (greedy) occurrences (0 or more) of '/', '.', '-', 'www', or other directories.
 
 ### Bracket Expressions
-Bracket expressions are used to define a character class within square brackets []. The example we're analyzing contains the following bracket expressions:
 
-[\da-z\.-]
-[a-z\.]
-[\/\w \.-]
+Bracket expressions are used to define a character class within square brackets []. 
+
+The example we're analyzing contains the following bracket expressions:
+
+    [\da-z\.-]
+    [a-z\.]
+    [\/\w \.-]
 
 ### Character Classes
 
