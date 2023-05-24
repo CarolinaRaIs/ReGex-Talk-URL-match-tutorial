@@ -95,10 +95,7 @@ Character classes define a set of characters to match within a larger set.
 
 Example:
 
-    [a-z]: Matches lowercase alphabetic characters between 'a' and 'z'.
-    \w: Matches a single word character (alphanumeric or underscore, [a-z0-9_]).
-    \d: Matches a single digit character (0-9).
-    .: Matches any character.
+    [\da-z\.-]: represents a character class that includes digits, lowercase letters, and the dot character. It can match any single character that is a digit, lowercase letter(a-z), or dot (.), or hyphens (-).
 
 ### The OR Operator
 
