@@ -74,6 +74,11 @@ Grouping expressions using parentheses () helps organize and extract characters 
 ([\/\w \.-]*): This group matches multiple (greedy) occurrences (0 or more) of '/', '.', '-', 'www', or other directories.
 
 ### Bracket Expressions
+Bracket expressions are used to define a character class within square brackets []. The example we're analyzing contains the following bracket expressions:
+
+[\da-z\.-]
+[a-z\.]
+[\/\w \.-]
 
 ### Character Classes
 
