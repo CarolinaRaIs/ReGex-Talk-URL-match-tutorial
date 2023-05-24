@@ -1,7 +1,6 @@
 # ReGex-Talk-URL-match-tutorial
 This tutorial is a comprehensive guide on matching URLs using regular expressions (regex).
 
-# quick-README-generator-node.js
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 ## [Description:](#description)
@@ -18,15 +17,16 @@ This tutorial provides an in-depth explanation of how to match URLs using regula
 - [Questions](#questions)
    
 ## [Installation:](#installation:)
-
-      
+No specific installation is required for this tutorial. However, it assumes a basic understanding of regular expressions and JavaScript.
    
 ## [Usage:](#usage:)
+        The tutorial provides a detailed breakdown of the regular expression 
+        /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/ 
+        used for matching URLs. 
 
-        
+Each component of the regex is explained, including anchors, quantifiers, character classes, grouping constructs, and more. Code snippets and examples are provided to illustrate the concepts.
 
-![plot](./sample-README.png)
-
+To access the tutorial, please refer to the gist-template.md file in this repository.
 
        To access the Github Repository visit:
       
@@ -44,13 +44,13 @@ This tutorial provides an in-depth explanation of how to match URLs using regula
    
 ## [Tests:](#tests:)
 
-       We encourage contributors to thoroughly explore the code and test it to ensure its functionality. Any feedback or suggestions regarding the testing process are welcomed and appreciated.
+       I encourage contributors to thoroughly explore the code and test it to ensure its functionality. Any feedback or suggestions regarding the testing process are welcomed and appreciated.
    
 ## [Questions:](#questions:)
 
 **If more questions arise please contact CarolinaRaIs at determination28@gmail.com or create an issue in the repository**
    
-
+Thank you for using the ReGex-Talk-URL-match-tutorial! I hope you find it helpful in understanding URL matching with regular expressions.
        
 ------------------------------------------------------------------------------------------------
    
