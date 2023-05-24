@@ -14,6 +14,7 @@ This tutorial provides an in-depth explanation of how to match URLs using regula
 - [License](#license)
 - [Contributing](#contributing)
 - [Tests](#tests)
+- [Contributions](#contributions)
 - [Questions](#questions)
    
 ## [Installation:](#installation:)
@@ -29,10 +30,10 @@ Each component of the regex is explained, including anchors, quantifiers, charac
 To access the tutorial, please refer to the gist-template.md file in this repository.
 
        To access the Github Repository visit:
-      
+       https://github.com/CarolinaRaIs/ReGex-Talk-URL-match-tutorial
 
        To access the deployed site visit:
-       
+       https://carolinarais.github.io/ReGex-Talk-URL-match-tutorial/ 
 
 ## [License:](#license:)
 
@@ -40,15 +41,17 @@ To access the tutorial, please refer to the gist-template.md file in this reposi
    
 ## [Contributing:](#contributing:)
 
+       I would like to acknowledge and thank [Shilohjones194](https://github.com/Shilohjones194) for their valuable tutorial that served as a reference for this project. Their tutorial can be found [here](<script src="https://gist.github.com/Shilohjones194/474bca145fc361bd9ec6d8c4d3bf71ae.js"></script>). Thank you for sharing your knowledge! 
+
        Contributions are welcome and encouraged for this project. If you find any issues or have any suggestions for new features, please open an issue or submit a pull request. Before submitting a pull request, please ensure that your code adheres to the project's coding guidelines and has appropriate test coverage. Thank you for your interest in contributing to this project!  
    
 ## [Tests:](#tests:)
 
        I encourage contributors to thoroughly explore the code and test it to ensure its functionality. Any feedback or suggestions regarding the testing process are welcomed and appreciated.
-   
+ 
 ## [Questions:](#questions:)
 
-**If more questions arise please contact CarolinaRaIs at determination28@gmail.com or create an issue in the repository**
+**If more questions arise please contact CarolinaRaIs at determination28@gmail.com or create an issue in the repository.**
    
 Thank you for using the ReGex-Talk-URL-match-tutorial! I hope you find it helpful in understanding URL matching with regular expressions.
        
